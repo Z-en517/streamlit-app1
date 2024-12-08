@@ -1,0 +1,10 @@
+import pickle
+import xgboost as xgb
+
+# 假设你已经训练了一个 XGBoost 模型
+model = xgb.XGBClassifier()
+model.fit(X_train, y_train)  # 假设 X_train 和 y_train 是你的训练数据
+
+# 保存模型到 .pkl 文件
+with open('XGBoost.pkl', 'wb') as f:
+    pickle.dump(model, f)
